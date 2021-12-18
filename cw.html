@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset= "UTF-8">
+        <title>Calculator</title>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row txtbox">
+                <div class="col-lg-12">
+
+                    <input type=text>
+                </div>
+            </div>
+
+            <div class ="btns">
+                <button onclick="clickbtn(1)">1</button>
+                <button onclick="clickbtn(2)">2</button>
+                <button onclick="clickbtn(3)">3</button>
+                <button onclick="clickbtn(4)">4</button>
+                <button onclick="clickbtn('c')">c</button>
+            </div>
+               
+            <div class ="btns">
+                <button onclick="clickbtn(5)">5</button>
+                <button onclick="clickbtn(6)">6</button>
+                <button onclick="clickbtn(7)">7</button>
+                <button onclick="clickbtn(8)">8</button>
+                <button onclick="clickbtn('=')">=</button>
+            </div>
+
+            <div class ="btns">
+                <button onclick="clickbtn('9')">9</button>
+                <button onclick="clickbtn('0')">0</button>
+                <button onclick="clickbtn('+')">+</button>
+                <button onclick="clickbtn('-')">-</button>
+                <button onclick="clickbtn('*')">*</button>
+                <button onclick="clickbtn('/')">/</button>
+
+            </div>
+
+            
+
+           
+
+        </div>
+    </body>
+    <script>
+        let textbox=document.getElementsByTagName('input')[0]
+        function clickbtn(num){
+            textbox.value+=num;
+            if(num=='='){
+                console.log(textbox.value)
+                let valArr=text.value.split("+")
+                let ans= parseInt(valArr[0]) + parseInt(valArr[1])
+                console.log(ans)
+                textbox.value=ans;
+                return;
+            }
+
+            textbox.value+=num;
+            if(num=='+'){
+
+                let firstvalue=textbox.value
+                console.log(firstvalue)
+            }
+
+
+        }
+    </script>
